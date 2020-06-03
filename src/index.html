@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SYSlider</title>
+    <link rel="stylesheet" href="styles/main.min.css"/>
+</head>
+<body>
+<div class="first-slider">
+    <div class="sy-slider">
+        <div class="sy-slider__container">
+            <img src="images/1.jpg" alt="Первое изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+            <img src="images/2.jpg" alt="Второе изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+            <img src="images/3.jpg" alt="Третье изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+        </div>
+        <div class="sy-slider__control">
+            <div class="sy-slider__control-item prev"></div>
+            <div class="sy-slider__control-item next"></div>
+        </div>
+        <div class="sy-slider__dots"></div>
+    </div>
+</div>
+
+<div class="second-slider">
+    <div class="sy-slider">
+        <div class="sy-slider__container">
+            <img src="images/4.jpg" alt="Первое изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+            <img src="images/5.jpg" alt="Второе изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+            <img src="images/6.jpg" alt="Третье изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+            <img src="images/7.jpg" alt="Третье изображение слайдера" class="sy-slider__container-item" data-object-fit="cover">
+        </div>
+        <div class="sy-slider__control">
+            <div class="sy-slider__control-item prev"></div>
+            <div class="sy-slider__control-item next"></div>
+        </div>
+        <div class="sy-slider__dots"></div>
+    </div>
+</div>
+<!--Полифил DOM для IE10+-->
+<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.append"></script>
+<!--Общие скрипты (например, если 2 раза подключить jquery, то jquery вынесется в common.min.js-->
+<script src="scripts/object-fit-polyfill.min.js"></script>
+<script src="scripts/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.sy-slider {
+  max-width: 960px;
+  position: relative;
+  height: 540px;
+  margin: 0 auto;
+  border: 5px solid gray;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &__container-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s ease;
+    object-fit: cover;
+    opacity: 0;
+  }
+
+  &__container-item.fade-off {
+    display: inline-block;
+    position: static;
+    opacity: 1;
+  }
+
+  &__container {
+    height: 100%;
+    width: auto;
+    white-space: nowrap;
+    overflow-x: visible;
+    font-size: 0;
+  }
+
+  &__container.fade-off {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 1s ease;
+  }
+
+  &__control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-item {
+      border: solid #fff;
+      border-width: 0 5px 5px 0px;
+      padding: 15px;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+
+      &.prev {
+        margin-left: 25px;
+        transform: rotate(135deg);
+      }
+
+      &.next {
+        margin-right: 25px;
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        opacity: .7;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    &-item {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 20px 10px;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+
+      &:hover {
+        opacity: .7;
+        cursor: pointer;
+      }
+
+      &.active {
+        background-color: gray;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
