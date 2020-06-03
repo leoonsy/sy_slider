@@ -1,13 +1,14 @@
 {
-  "name": "frontend-template",
+  "name": "SYSlider",
   "version": "1.0.0",
-  "description": "frontend-template",
+  "description": "Simple js slider",
   "keywords": [
-    "frontent",
-    "template"
+    "slider",
+    "simple"
   ],
   "author": "Yashanovsky Sergey",
   "license": "ISC",
+  "main": "dist/SYSlider.js",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -15,6 +16,7 @@
     "@babel/preset-env": "^7.10.2",
     "autoprefixer": "^9.8.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "browser-sync": "^2.26.7",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
@@ -45,10 +47,12 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch",
-    "serve": "webpack-dev-server --inline --hot --mode development"
+    "wp:build": "webpack --mode production",
+    "wp:dev": "webpack --mode development",
+    "wp:watch": "webpack --mode development --watch",
+    "wp:serve": "webpack-dev-server --inline --hot --mode development",
+    "gulp:build": "gulp build --mode production",
+    "gulp:dev": "gulp build --mode development",
   },
   "dependencies": {
     "core-js": "^3.6.5",

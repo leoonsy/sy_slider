@@ -64,7 +64,6 @@ class SYSlider {
             this.changeSlideIndex({slideIndex: index})
         );
         this.dotContainer.append(dotItem);
-
     }
 
     getPositiveModule(number, module) {
