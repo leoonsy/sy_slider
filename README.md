@@ -7,10 +7,11 @@
 
 Для разработчика:
 npm install
+
 Сборка проекта:
-1) gulp clean
-2) npm run build
-3) gulp build --mode production
+1) gulp clean //очистить dist
+2) npm run build //собрать скрипты
+3) gulp build --mode production //собрать все остальное
 
 Начать/продолжить разработку:
 1) gulp clean //удалить все из папки dist
