@@ -241,7 +241,6 @@ gulp.task('watch', gulp.parallel('serve', async => {
     gulp.watch(path.src[key] + path.watch.html, {usePolling: true}, gulp.series('html:build'));
     gulp.watch(path.src[key] + path.watch.img, {usePolling: true}, gulp.series('img:build'));
     gulp.watch(path.src[key] + path.watch.other, {usePolling: true}, gulp.series('other:build'));
-    console.log(11);
 }));
 
 // очистка кэша
